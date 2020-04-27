@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "typeahead-simple": [
+        "dist/typeahead-simple/typeahead-simple",
+        "dist/typeahead-simple"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

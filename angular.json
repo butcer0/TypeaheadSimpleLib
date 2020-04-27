@@ -123,6 +123,46 @@
           }
         }
       }
+    },
+    "TypeaheadSimple": {
+      "projectType": "library",
+      "root": "projects/typeahead-simple",
+      "sourceRoot": "projects/typeahead-simple/src",
+      "prefix": "TaS",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/typeahead-simple/tsconfig.lib.json",
+            "project": "projects/typeahead-simple/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/typeahead-simple/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/typeahead-simple/src/test.ts",
+            "tsConfig": "projects/typeahead-simple/tsconfig.spec.json",
+            "karmaConfig": "projects/typeahead-simple/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/typeahead-simple/tsconfig.lib.json",
+              "projects/typeahead-simple/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "TypeaheadSimpleLib"
 }
